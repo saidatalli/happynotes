@@ -1,0 +1,34 @@
+<div class="container">
+    <%- include('partials/_add_button.ejs') %>
+    <h1 class="lead-title">Hi <%= user.userName %>, you have <%= left %> happy notes.</h1>
+
+    <div class="row">
+        <% notes.forEach( el => { %>
+        <div class="col s12 m4">
+            <div class="card darken-1 noteItem" data-id='<%=el._id%>'>
+                <div class="card-content">
+                    <p><%= el.note %></p>
+                    <br>
+                    <p class='mood purple-text'><%= el.mood%></p>
+                </div>
+                <div class="card-action">
+                    <%- include('partials/_edit_button.ejs') %>
+                    <!-- <a href="/notes/edit/:<%=el._id%>" class="btn editButton btn waves-effect waves-light left white-text"><i class="fa-solid fa-pen-to-square"></i></a> -->
+                    <button class="deleteButton btn waves-effect waves-light red">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div> 
+            </div>
+        </div>
+        <% }) %> 
+    </div>
+    
+    <!-- <ul>
+    <% notes.forEach( el => { %>
+            <li class='noteItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.note %></span>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul> -->
+</div> 

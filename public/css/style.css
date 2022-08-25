@@ -1,0 +1,99 @@
+/* SECTIONS */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+    margin-top: 100px;
+    text-align: center;
+    border: 1px solid #AC58f5;
+    padding: 10px;
+    box-shadow: 5px 10px #AC58f5;
+}
+.page-header,
+.page-footer {
+    background-color: #AC58f5;
+}
+.page-header {
+    padding: 10px 220px;
+    height: 80px;
+}
+#mobile-menu {
+    background-color: #AC58f5;
+}
+.hero-container {
+    height: 500px;
+    padding: 0 0 20px 0;
+}
+#modal1, #modal2 {
+    padding: 30px 5px;
+}
+
+/* BUTTONS AND LINKS */
+.btn {
+    background-color: #AC58f5;
+}
+.btn:hover {
+    background-color: #9428F2;
+}
+.btn-logout {
+    margin-top: 10px;
+}
+a {
+    color: #AC58f5;
+}
+a:hover {
+    color: #9428F2;
+}
+.editButton {
+    margin: 0 10px 0 0;
+}
+
+.input-field input[type]:focus + label, .materialize-textarea:focus:not([readonly]) + label{
+    color: #AC58f5 !important;
+}
+.input-field input[type]:focus, .materialize-textarea:focus:not([readonly]){
+    border-bottom: 1px solid #AC58f5 !important;
+    box-shadow: 0 1px 0 0 #AC58f5 !important;
+}
+
+/* HEADINGS */
+h1 {
+    font-weight: 600;
+    font-size: 45px;
+    padding: 40px 0 0 0;
+}
+.lead-title {
+    padding: 20px 0 10px 10px;
+}
+
+
+
+/* TASKS COMPLETED OR NOT */
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+.not{
+    text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 800px) {
+    .page-header {
+        padding: 10px 30px;
+    }
+    .hero-container {
+        height: 900px;
+    }
+    h1 {
+        padding-top: 40px;
+    }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1150px) {
+    .page-header {
+        padding: 10px 165px;
+    }
+}
