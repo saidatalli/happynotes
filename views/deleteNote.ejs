@@ -1,0 +1,10 @@
+<div class="container main-container">
+    <form action="/notes/deleteNote/<%= note._id%>" method='POST'>
+    <p>Are you sure you want to delete the note?</p>
+    <button class="btn waves-effect waves-light white-text deleteButton red" type="submit" name="action">Delete Note
+        <i class="fa-solid fa-trash-can"></i>
+    </button>
+    <a href="/notes" class="btn waves-effect waves-light white-text grey darken-1">Cancel
+    </a>
+</form>
+</div>

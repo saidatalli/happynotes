@@ -12,23 +12,12 @@
                     <p class='mood purple-text'><%= el.mood%></p>
                 </div>
                 <div class="card-action">
-                    <%- include('partials/_edit_button.ejs') %>
-                    <!-- <a href="/notes/edit/:<%=el._id%>" class="btn editButton btn waves-effect waves-light left white-text"><i class="fa-solid fa-pen-to-square"></i></a> -->
-                    <button class="deleteButton btn waves-effect waves-light red">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </button>
+                    
+                    <a href="/notes/editNote/<%= el._id %>" class="btn editButton waves-effect waves-light left white-text"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="/notes/deleteNote/<%= el._id %>" class="btn deleteButton waves-effect waves-light red white-text"><i class="fa-solid fa-trash-can"></i></a>
                 </div> 
             </div>
         </div>
         <% }) %> 
     </div>
-    
-    <!-- <ul>
-    <% notes.forEach( el => { %>
-            <li class='noteItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.note %></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul> -->
 </div> 

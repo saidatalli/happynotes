@@ -25,11 +25,14 @@ body {
     height: 500px;
     padding: 0 0 20px 0;
 }
-#modal1, #modal2 {
-    padding: 30px 5px;
+.main-container {
+    margin-top: 100px;
+    min-height: 250px;
 }
-
-/* BUTTONS AND LINKS */
+.input-field {
+    margin-top: 40px;
+}
+/* BUTTONS, LINKS AND LABELS */
 .btn {
     background-color: #AC58f5;
 }
@@ -39,16 +42,21 @@ body {
 .btn-logout {
     margin-top: 10px;
 }
-a {
+.editButton {
+    margin: 0 10px 0 0;
+}
+
+a,
+.dropdown-content li>a, .dropdown-content li>span {
     color: #AC58f5;
 }
 a:hover {
     color: #9428F2;
 }
-.editButton {
-    margin: 0 10px 0 0;
-}
 
+.input-field.col label {
+    left: 0;
+}
 .input-field input[type]:focus + label, .materialize-textarea:focus:not([readonly]) + label{
     color: #AC58f5 !important;
 }
@@ -65,17 +73,7 @@ h1 {
 }
 .lead-title {
     padding: 20px 0 10px 10px;
-}
-
-
-
-/* TASKS COMPLETED OR NOT */
-.completed{
-    text-decoration: line-through;
-    color: gray;
-}
-.not{
-    text-decoration: underline;
+    font-size: 25px;
 }
 
 /* MEDIA QUERIES */
@@ -95,5 +93,10 @@ h1 {
 @media only screen and (min-width: 850px) and (max-width: 1150px) {
     .page-header {
         padding: 10px 165px;
+    }
+}
+@media only screen and (min-width: 850px) {
+    .card-content {
+        min-height: 250px;
     }
 }

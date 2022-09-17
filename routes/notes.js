@@ -5,14 +5,17 @@ const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 router.get('/', ensureAuth, notesController.getNotes)
 
+router.get('/createNote', notesController.showCreateNoteForm)
+
 router.post('/createNote', notesController.createNote)
 
-router.put('/editNote', notesController.editNote)
+router.get('/editNote/:id', notesController.showEditForm)
 
-// router.put('/markComplete', notesController.markComplete)
+router.post('/editNote/:id', notesController.editNote)
 
-// router.put('/markIncomplete', notesController.markIncomplete)
+router.get('/deleteNote/:id', notesController.showDeleteNoteForm)
 
-router.delete('/deleteNote', notesController.deleteNote)
+
+router.post('/deleteNote/:id', notesController.deleteNote)
 
 module.exports = router

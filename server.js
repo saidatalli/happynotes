@@ -26,7 +26,16 @@ app.set('view engine', 'ejs')
 // app.set('views', path.join(__dirname, 'views'));
 app.set('layout', './layout/main')
 
+
+
+app.use('/notes', express.static(path.join(__dirname, 'public')))
+// app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static('public'))
+app.use('/notes/editNote', express.static(__dirname + '/public'));
+app.use('/notes/createNote', express.static(__dirname + '/public'));
+app.use('/notes/deleteNote', express.static(__dirname + '/public'));
+
+// Bodyparser
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
@@ -54,9 +63,6 @@ app.use(flash())
 app.use('/', mainRoutes)
 app.use('/notes', noteRoutes)
  
-// app.listen(process.env.PORT, ()=>{
-//     console.log(`Server is running on http://localhost:${process.env.PORT}, you better catch it!`)
-// }) 
 
 const PORT = process.env.PORT || 1122
 

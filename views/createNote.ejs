@@ -1,7 +1,8 @@
-<div class="container main-container">  
-    <form action="/notes/editNote/<%= note._id%>" method='POST'>
-        <input type="text" placeholder="Enter Note" name="noteItem" value="<%= note.note %>">
-        <div class="input-field col s12" id="mood" type="text" name="mood" value="note.mood">
+<div class="container main-container">
+    <form action="/notes/createNote" method='POST'>
+        <input type="text" placeholder="Enter Note Item" name='noteItem'>
+        <!-- Bug - Mood not saving properly in database -->
+        <div class="input-field col s12">
             <select id="mood" name="mood">
                 <option value="Happy😃" selected>Happy😃</option>
                 <option value="Nervous😬">Nervous😬</option>
@@ -10,7 +11,7 @@
             </select>  
             <label for="mood">Choose Your Current Mood</label> 
         </div>
-        <button class="btn waves-effect waves-light white-text" type="submit" name="action">Update Note
+        <button class="btn waves-effect waves-light white-text" type="submit" name="action">Add Note
             <i class="fa-solid fa-notes-medical"></i>
         </button>
         <a href="/notes" class="btn waves-effect waves-light white-text grey darken-1">Cancel

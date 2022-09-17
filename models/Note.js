@@ -9,10 +9,7 @@ const NoteSchema = new mongoose.Schema({
     type: String,
     default: 'Happy😃',
     enum: ['Happy😃', 'Nervous😬', 'Anxious🥺', 'Sad😭'],
-  },
-  completed: {
-    type: Boolean,
-    required: true,
+    required: true
   },
   userId: {
     type: String,

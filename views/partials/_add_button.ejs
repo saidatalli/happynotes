@@ -1,27 +1,4 @@
 <div class="fixed-action-btn">
-    <!-- Modal Trigger -->
-    <a href="#modal1" class="btn btn-floating btn-large waves-effect waves-light modal-trigger"><i class="fas fa-plus"></i></a>
-
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-        <div class="container">
-            <form action="/notes/createNote" method='POST'>
-                <input type="text" placeholder="Enter Note Item" name='noteItem'>
-                <div class="input-field col s12" id="moodTracker" type="text" name="mood">
-                    <select class="browser-default">
-                        <option value="" disabled selected>Choose Your Mood</option>
-                        <option value="1">Happy😃</option>
-                        <option value="2">Nervous😬</option>
-                        <option value="3">Anxious🥺</option>
-                        <option value="3">Sad😭</option>
-                    </select>
-                    <!-- <label for="moodTracker">Your Current Mood</label> -->
-                </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="fa-solid fa-paper-plane"></i>
-                </button>
-            </form>
-        </div>
-    </div>
+    <a href="/notes/createNote" class="btn btn-floating btn-large waves-effect waves-light"><i class="fas fa-plus"></i></a>
        
 </div>

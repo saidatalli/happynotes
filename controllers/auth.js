@@ -7,9 +7,6 @@ const User = require('../models/User')
       return res.redirect('/notes')
     }
     res.render('login', { layout: 'layout/login' });
-    // res.render('login', {
-    //   title: 'Login'
-    // })
   }
   
   exports.postLogin = (req, res, next) => {
